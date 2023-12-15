@@ -18,7 +18,7 @@ int temp = *a;
  *
  * Return:nothing
  **/
-void bubble_sort(int *array, size_t size) 
+void bubble_sort(int *array, size_t size)
 {
 int swapped = 0;
 size_t i;
@@ -27,7 +27,7 @@ size_t k;
 
 for (i = 0; i < size - 1; i++)
 {
-for ( j = 0; j < size - i - 1; j++)
+for (j = 0; j < size - i - 1; j++)
 {
 if (array[j] > array[j + 1])
 {
@@ -36,7 +36,7 @@ swapped = 1;
 for (k = 0; k < size; k++)
 {
 printf("%d", array[k]);
-if (k < size - 1) 
+if (k < size - 1)
 {
 printf(", ");
 }
