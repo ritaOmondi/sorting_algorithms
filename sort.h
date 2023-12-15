@@ -2,7 +2,6 @@
 #define SORT_H
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdargs.h>
 
 /** typedef **/
 /**
@@ -19,6 +18,7 @@ typedef struct listint_s
     struct listint_s *next;
 } listint_t;
 /** prototypes **/
+void swap(int *a, int *b);
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 void bubble_sort(int *array, size_t size);
