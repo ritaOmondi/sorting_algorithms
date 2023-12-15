@@ -19,7 +19,7 @@ typedef struct listint_s
 } listint_t;
 /** prototypes **/
 void insertion_sort_list(listint_t **list);
-void swap_nodes(listint_t **list, listint_t *a, listint_t *b);
+listint_t *swap_node(listint_t *node, listint_t **list);
 void print_list(const listint_t *list);
 void swap(int *a, int *b);
 void print_array(const int *array, size_t size);
