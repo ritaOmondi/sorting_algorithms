@@ -47,7 +47,7 @@ int partition(int *array, int low, int high, size_t size)
  * @low: The lowest value of the array
  * @high: highest value of the array
  * @size: Size of The Array
- * Return: void
+ * Return:void
  */
 void lomuto_qsort(int *array, int low, int high, size_t size)
 {
@@ -64,7 +64,7 @@ void lomuto_qsort(int *array, int low, int high, size_t size)
  * quick_sort - Quick Sort Algorithme using lomuto partition
  * @array: Array to sort
  * @size: Size of The Array
- * Return: Sorted Array (void)
+ * Return:Sorted Array (void)
  */
 void quick_sort(int *array, size_t size)
 {
