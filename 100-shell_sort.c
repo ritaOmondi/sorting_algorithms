@@ -1,5 +1,26 @@
 #include "sort.h"
 /**
+ * print_array - Function that prints the arrau
+ * @array: array of integers
+ * @size: the size of the of the array
+ * Return: Nothing
+ */
+void print_array(const int *array, size_t size)
+{
+	size_t i;
+
+	for (i = 0; i < size; i++)
+	{
+		printf("%d", array[i]);
+if (i < size - 1)
+	{
+	printf(", ");
+	}
+	}
+	printf("\n");
+}
+
+/**
  * shell_sort -Sort an Array using shell sort
  * @array: array of Int
  * @size: array size
@@ -8,30 +29,28 @@
 
 void shell_sort(int *array, size_t size)
 {
-	unsigned int gap = 1, i, j;
+	size_t interval = 1;
+	size_t i, j;
 	int temp;
 
-	if (array == NULL)
-		return;
-	if (size < 2)
-		return;
-	while (gap < size / 3)
-		gap = gap * 3 + 1;
-
-	while (gap > 0)
+	while (interval < size / 3)
 	{
-		for (i = gap; i < size; i++)
-		{
-			temp = array[i];
-			j = i;
-			while (j >= gap && array[j - gap] > temp)
-			{
-				array[j] = array[j - gap];
-				j -= gap;
-			}
-			array[j] = temp;
-		}
-		print_array(array, size);
-		gap /= 3;
+	interval = interval * 3 + 1;
 	}
+	while (interval > 0)
+	{
+	for (i = interval; i < size; i++)
+	{
+	temp = array[i];
+	for (j = i; j >= interval && array[j - interval] > temp; j -= interval)
+	{
+	array[j] = array[j - interval];
+	}
+	array[j] = temp;
+	}
+	printf("Interval %lu: ", interval);
+	print_array(array, size);
+	interval = (interval - 1) / 3;
+	}
+
 }
