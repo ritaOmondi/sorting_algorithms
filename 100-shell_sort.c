@@ -3,6 +3,7 @@
  * shell_sort -Sort an Array using shell sort
  * @array: array of Int
  * @size: array size
+ * return: nothing
  **/
 
 void shell_sort(int *array, size_t size)
